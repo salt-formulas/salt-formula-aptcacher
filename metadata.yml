@@ -1,0 +1,3 @@
+name: "apt-cacher-ng"
+version: "0.1"
+source: "https://github.com/salt-formula/salt-formula-apt-cacher-ng"

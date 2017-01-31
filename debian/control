@@ -1,0 +1,15 @@
+Source: salt-formula-apt-cacher-ng
+Maintainer: salt-formulas@lists.launchpad.net
+Section: admin
+Priority: optional
+Build-Depends: debhelper (>= 9), salt-master, python, python-yaml
+Standards-Version: 3.9.6
+Homepage: http://www.mirantis.com
+Vcs-Browser: https://github.com/salt-formula/salt-formula-apt-cacher-ng
+Vcs-Git: https://github.com/salt-formula/salt-formula-apt-cacher-ng.git
+
+Package: salt-formula-apt-cacher-ng
+Architecture: all
+Depends: ${misc:Depends}, salt-master, reclass
+Description: apt-cacher-ng salt formula
+ Install and configure apt-cacher-ng system.
