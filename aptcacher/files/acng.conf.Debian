@@ -1,0 +1,21 @@
+{%- from "aptcacher/map.jinja" import server with context %}
+CacheDir: /var/cache/apt-cacher-ng
+LogDir: /var/log/apt-cacher-ng
+SupportDir: /usr/lib/apt-cacher-ng
+
+Port: {{ server.bind.port }}
+BindAddress: {{ server.bind.address }}
+
+ReportPage: acng-report.html
+ExTreshold: 4
+LocalDirs: acng-doc /usr/share/doc/apt-cacher-ng
+
+{%- if server.proxy is defined %}
+Proxy: {{ server.proxy }}
+{%- endif %}
+{%- if server.passthruurl is defined %}
+PassThroughPattern: ({{ server.passthruurl|join('|')|replace(".","\.") }}):(80|443)
+{%- endif %}
+{%- if server.passhthrupattern is defined %}
+PfilePatternEx: {{ server.passhthrupattern|join('|') }}
+{%- endif %}

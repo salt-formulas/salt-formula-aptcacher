@@ -1,9 +1,9 @@
 applications:
-- apt-cacher
+- aptcacher
 classes:
-- service.apt-cacher.support
+- service.aptcacher.support
 parameters:
-  apt-cacher:
+  aptcacher:
     server:
       enabled: true
       bind:

@@ -1,4 +1,4 @@
-apt-cacher:
+aptcacher:
   server:
     enabled: true
     bind:

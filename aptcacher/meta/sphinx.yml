@@ -1,7 +1,7 @@
-{%- from "apt-cacher/map.jinja" import server with context %}
+{%- from "aptcacher/map.jinja" import server with context %}
 # Fill in documentation details
 doc:
-  name: apt-cacher
+  name: aptcacher
   description: Some service info
   role:
     server:

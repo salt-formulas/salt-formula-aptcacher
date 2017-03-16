@@ -1,0 +1,12 @@
+{% set server = salt['grains.filter_by']({
+    'Debian': {
+        'pkgs': ['apt-cacher-ng'],
+        'services': ['apt-cacher-ng'],
+        'notification': False,
+    },
+    'RedHat': {
+        'pkgs': ['apt-cacher'],
+        'services': ['apt-cacher'],
+        'notification': False,
+    },
+    }, merge=pillar.aptcacher.get('server', {})) %}
