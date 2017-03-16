@@ -23,24 +23,26 @@ Single apt-cacher service
 More advanced setup with Proxy and passthru patterns
 
 .. code-block:: yaml
-		aptcacher:
-			server:
-				enabled: true
-				bind:
-					address: 0.0.0.0
-					port: 3142
-				proxy: 'http://proxy-user:proxy-pass@proxy-host:9999'
-				passthruurl:
-					- 'repos.influxdata.com'
-					- 'packagecloud.io'
-					- 'packagecloud-repositories.s3.dualstack.us-west-1.amazonaws.com'
-					- 'launchpad.net'
-					- 'apt.dockerproject.org'
-				passhthrupattern:
-					- '\.key$'
-					- '\.gpg$'
-					- '\.pub$'
-					- '\.jar$'
+
+    aptcacher:
+      server:
+        enabled: true
+        bind:
+          address: 0.0.0.0
+          port: 3142
+        proxy: 'http://proxy-user:proxy-pass@proxy-host:9999'
+        passthruurl:
+          - 'repos.influxdata.com'
+          - 'packagecloud.io'
+          - 'packagecloud-repositories.s3.dualstack.us-west-1.amazonaws.com'
+          - 'launchpad.net'
+          - 'apt.dockerproject.org'
+        passhthrupattern:
+          - '\.key$'
+          - '\.gpg$'
+          - '\.pub$'
+          - '\.jar$'
+
 
 Read more
 =========
