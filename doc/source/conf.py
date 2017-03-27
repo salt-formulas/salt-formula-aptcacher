@@ -35,7 +35,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'salt-formula-apt-cacher-ng'
+project = u'salt-formula-aptcacher'
 copyright = u'2016, Mirantis Inc. et al'
 
 # If true, '()' will be appended to :func: etc. cross-reference text.

@@ -1,4 +1,4 @@
-Source: salt-formula-apt-cacher-ng
+Source: salt-formula-aptcacher
 Maintainer: Salt Formulas Community <salt-formulas@lists.launchpad.net>
 Section: admin
 Priority: optional
