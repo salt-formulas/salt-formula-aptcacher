@@ -2,10 +2,23 @@
 Changelog
 =========
 
+Version 2017.3.1
+=============================
+
+commit 1ecceacc17f37557231a6637d3d0595e2925c041 (HEAD -> master)
+Author: Filip Pytloun <filip@pytloun.cz>
+
+    Fix tests
+
 Version 2017.3
 =============================
 
-commit 338bbfd8e8ea12bf7633a66a01090800c33cbdde (HEAD -> master, origin/master)
+commit 88b994c50c3ea04c3b63394892980bee6d65b279 (tag: 2017.3, origin/master)
+Author: Filip Pytloun <filip@pytloun.cz>
+
+    Version 2017.3
+
+commit 338bbfd8e8ea12bf7633a66a01090800c33cbdde
 Author: Filip Pytloun <filip@pytloun.cz>
 
     Fix formula name, other fixes for release
