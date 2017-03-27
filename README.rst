@@ -12,7 +12,7 @@ Single apt-cacher service
 
 .. code-block:: yaml
 
-    apt-cacher:
+    apt_cacher_ng:
       server:
         enabled: true
         bind:
@@ -24,7 +24,7 @@ More advanced setup with Proxy and passthru patterns
 
 .. code-block:: yaml
 
-    aptcacher:
+    apt_cacher_ng:
       server:
         enabled: true
         bind:
