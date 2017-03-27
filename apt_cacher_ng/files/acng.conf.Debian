@@ -1,4 +1,4 @@
-{%- from "aptcacher/map.jinja" import server with context %}
+{%- from "apt_cacher_ng/map.jinja" import server with context %}
 CacheDir: /var/cache/apt-cacher-ng
 LogDir: /var/log/apt-cacher-ng
 SupportDir: /usr/lib/apt-cacher-ng

@@ -1,5 +1,5 @@
 parameters:
-  aptcacher:
+  apt_cacher_ng:
     _support:
       collectd:
         enabled: false

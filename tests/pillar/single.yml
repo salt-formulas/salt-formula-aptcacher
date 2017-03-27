@@ -1,4 +1,4 @@
-aptcacher:
+apt_cacher_ng:
   server:
     enabled: true
     bind:
