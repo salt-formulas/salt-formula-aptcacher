@@ -1,7 +1,7 @@
 
-=============
-apt-cacher-ng
-=============
+=========
+aptcacher
+=========
 
 Apt-Cacher NG is a caching HTTP proxy intended for use with download clients of system distribution's package managers.
 
@@ -12,7 +12,7 @@ Single apt-cacher service
 
 .. code-block:: yaml
 
-    apt_cacher_ng:
+    aptcacher:
       server:
         enabled: true
         bind:
@@ -24,7 +24,7 @@ More advanced setup with Proxy and passthru patterns
 
 .. code-block:: yaml
 
-    apt_cacher_ng:
+    aptcacher:
       server:
         enabled: true
         bind:
@@ -47,4 +47,4 @@ More advanced setup with Proxy and passthru patterns
 Read more
 =========
 
-* https://www.unix-ag.uni-kl.de/~bloch/acng/ 
+* https://www.unix-ag.uni-kl.de/~bloch/acng/

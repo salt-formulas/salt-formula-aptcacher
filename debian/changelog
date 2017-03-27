@@ -1,3 +1,9 @@
+salt-formula-aptcacher (2017.3) trusty; urgency=medium
+
+  * New version
+
+ -- Filip Pytloun <filip@pytloun.cz>  Mon, 27 Mar 2017 10:55:52 +0200
+
 salt-formula-aptcacher (0.2) trusty; urgency=medium
 
   * Initial release
