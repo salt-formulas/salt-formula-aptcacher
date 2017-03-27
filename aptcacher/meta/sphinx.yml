@@ -1,0 +1,9 @@
+{%- from "apt_cacher_ng/map.jinja" import server with context %}
+# Fill in documentation details
+doc:
+  name: aptcacher
+  description: APT caching service
+  role:
+    server:
+      name: server
+      param: {}

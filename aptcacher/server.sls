@@ -1,7 +1,7 @@
-{%- from "apt_cacher_ng/map.jinja" import server with context %}
+{%- from "aptcacher/map.jinja" import server with context %}
 {%- if server.enabled %}
 
-apt_cacher_ng_packages:
+aptcacher_packages:
   pkg.installed:
   - names: {{ server.pkgs }}
 
@@ -12,13 +12,13 @@ apt_cacher_ng_packages:
 
 /etc/apt-cacher-ng/acng.conf:
   file.managed:
-  - source: salt://apt_cacher_ng/files/acng.conf.{{ grains.os_family }}
+  - source: salt://aptcacher/files/acng.conf.{{ grains.os_family }}
   - template: jinja
   - require:
     - file: /etc/apt-cacher-ng
-    - pkg: apt_cacher_ng_packages
+    - pkg: aptcacher_packages
 
-apt_cacher_ng_services:
+aptcacher_services:
   service.running:
   - enable: true
   - names: {{ server.services }}

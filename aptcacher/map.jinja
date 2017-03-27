@@ -3,10 +3,18 @@
         'pkgs': ['apt-cacher-ng'],
         'services': ['apt-cacher-ng'],
         'notification': False,
+        'bind': {
+            'address': '0.0.0.0',
+            'port': 3142,
+        },
     },
     'RedHat': {
         'pkgs': ['apt-cacher'],
         'services': ['apt-cacher'],
         'notification': False,
+        'bind': {
+            'address': '0.0.0.0',
+            'port': 3142,
+        },
     },
-    }, merge=pillar.apt_cacher_ng.get('server', {})) %}
+    }, merge=pillar.aptcacher.get('server', {})) %}
