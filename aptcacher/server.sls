@@ -24,5 +24,24 @@ aptcacher_services:
   - names: {{ server.services }}
   - watch:
     - file: /etc/apt-cacher-ng/acng.conf
+    - module: aptcacher_limits_override
+
+aptcacher_limits_override_dir:
+  file.directory:
+  - name: /etc/systemd/system/apt-cacher-ng.service.d/
+  - mode: 755
+  - makedirs: true
+
+aptcacher_limits_override:
+  file.managed:
+  - name: /etc/systemd/system/apt-cacher-ng.service.d/override.conf
+  - source: salt://aptcacher/files/systemd_override.conf
+  - template: jinja
+  - require:
+    - file: aptcacher_limits_override_dir
+  module.run:
+  - name: service.systemctl_reload
+  - onchanges:
+    - file: /etc/systemd/system/apt-cacher-ng.service.d/override.conf
 
 {%- endif %}
