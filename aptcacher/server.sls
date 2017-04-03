@@ -47,7 +47,7 @@ aptcacher_init:
   - mode: 644
   - template: jinja
   - watch_in:
-    service: aptcacher_services
+    - service: aptcacher_services
 {%- endif %}
 
 {%- endif %}
