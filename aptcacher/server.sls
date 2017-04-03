@@ -24,9 +24,8 @@ aptcacher_services:
   - names: {{ server.services }}
   - watch:
     - file: /etc/apt-cacher-ng/acng.conf
-{%- if grains.get('init', None) == 'systemd' %}
-    - module: aptcacher_limits_override
 
+{%- if grains.get('init', None) == 'systemd' %}
 aptcacher_limits_override:
   file.managed:
   - name: /etc/systemd/system/apt-cacher-ng.service.d/override.conf
@@ -37,15 +36,18 @@ aptcacher_limits_override:
   - name: service.systemctl_reload
   - onchanges:
     - file: /etc/systemd/system/apt-cacher-ng.service.d/override.conf
+  - watch_in:
+      - service: aptcacher_services
 {%- else %}
-    - file: /etc/init.d/apt-cacher-ng
 
 aptcacher_init:
   file.managed:
-  - name: /etc/init.d/apt-cacher-ng
-  - source: salt://aptcacher/files/apt-cacher-ng-init
-  - mode: 755
+  - name: /etc/default/apt-cacher-ng
+  - source: salt://aptcacher/files/apt-cacher-ng-default
+  - mode: 644
   - template: jinja
+  - watch_in:
+    service: aptcacher_services
 {%- endif %}
 
 {%- endif %}
