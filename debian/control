@@ -10,6 +10,6 @@ Vcs-Git: https://github.com/salt-formula/salt-formula-aptcacher.git
 
 Package: salt-formula-aptcacher
 Architecture: all
-Depends: ${misc:Depends}, salt-master, reclass
+Depends: ${misc:Depends}
 Description: aptcacher salt formula
  Install and configure apt-cacher-ng system.
